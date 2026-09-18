@@ -25,10 +25,74 @@ function Home() {
     <main className="home-page">
 
       {/* =====================================================
+          ADVANCED LEARNIFY OPENING ANIMATION
+      ===================================================== */}
+
+      <div className="learnify-loader">
+
+        {/* Animated grid background */}
+        <div className="loader-grid"></div>
+
+        {/* Animated glowing lights */}
+        <div className="loader-glow loader-glow-one"></div>
+        <div className="loader-glow loader-glow-two"></div>
+
+        {/* Animated orbit rings */}
+        <div className="loader-orbit loader-orbit-one"></div>
+        <div className="loader-orbit loader-orbit-two"></div>
+        <div className="loader-orbit loader-orbit-three"></div>
+
+        {/* Learnify animated logo */}
+        <div className="loader-core">
+
+          <div className="loader-logo-mark">
+
+            <span className="loader-book-left"></span>
+
+            <span className="loader-book-right"></span>
+
+            <span className="loader-book-line"></span>
+
+          </div>
+
+        </div>
+
+        {/* Brand animation */}
+        <div className="loader-brand">
+
+          <span className="loader-brand-main">
+            LEARNIFY
+          </span>
+
+          <span className="loader-brand-sub">
+            ONLINE EDUCATION PLATFORM
+          </span>
+
+        </div>
+
+        {/* Loading progress */}
+        <div className="loader-progress">
+          <span></span>
+        </div>
+
+        {/* Loading status */}
+        <div className="loader-status">
+
+          <span className="loader-status-dot"></span>
+
+          Preparing your learning experience...
+
+        </div>
+
+      </div>
+
+
+      {/* =====================================================
           HERO
       ===================================================== */}
 
       <section className="home-hero">
+
         <div className="home-container hero-grid">
 
           {/* LEFT CONTENT */}
@@ -98,11 +162,15 @@ function Home() {
               </div>
 
               <div>
-                <strong>50K+ learners</strong>
+
+                <strong>
+                  50K+ learners
+                </strong>
 
                 <p>
                   Already learning on Learnify
                 </p>
+
               </div>
 
             </div>
@@ -121,8 +189,6 @@ function Home() {
             <div className="hero-orbit orbit-two"></div>
 
             <div className="hero-main-card">
-
-              {/* VIDEO */}
 
               <div className="hero-image-wrap">
 
@@ -146,8 +212,11 @@ function Home() {
                 <div className="hero-image-overlay"></div>
 
                 <div className="hero-live-card">
+
                   <span className="live-dot"></span>
+
                   Live learning
+
                 </div>
 
               </div>
@@ -158,20 +227,28 @@ function Home() {
               <div className="hero-course-preview">
 
                 <div>
-                  <span>Popular this week</span>
+
+                  <span>
+                    Popular this week
+                  </span>
 
                   <h3>
                     Complete React Developer Course
                   </h3>
+
                 </div>
 
                 <div className="hero-course-rating">
+
                   <Star
                     size={14}
                     fill="currentColor"
                   />
 
-                  <strong>4.9</strong>
+                  <strong>
+                    4.9
+                  </strong>
+
                 </div>
 
               </div>
@@ -184,15 +261,21 @@ function Home() {
             <div className="floating-stat floating-stat-one">
 
               <div className="floating-icon">
+
                 <Users size={18} />
+
               </div>
 
               <div>
-                <strong>12,000+</strong>
+
+                <strong>
+                  12,000+
+                </strong>
 
                 <span>
                   Active learners
                 </span>
+
               </div>
 
             </div>
@@ -203,15 +286,21 @@ function Home() {
             <div className="floating-stat floating-stat-two">
 
               <div className="floating-icon">
+
                 <CheckCircle2 size={18} />
+
               </div>
 
               <div>
-                <strong>94%</strong>
+
+                <strong>
+                  94%
+                </strong>
 
                 <span>
                   Completion rate
                 </span>
+
               </div>
 
             </div>
@@ -219,6 +308,7 @@ function Home() {
           </div>
 
         </div>
+
       </section>
 
 
@@ -237,11 +327,15 @@ function Home() {
             </div>
 
             <div>
-              <strong>500+</strong>
+
+              <strong>
+                500+
+              </strong>
 
               <span>
                 Expert Courses
               </span>
+
             </div>
 
           </div>
@@ -254,11 +348,15 @@ function Home() {
             </div>
 
             <div>
-              <strong>50K+</strong>
+
+              <strong>
+                50K+
+              </strong>
 
               <span>
                 Active Learners
               </span>
+
             </div>
 
           </div>
@@ -267,18 +365,24 @@ function Home() {
           <div className="stat-item">
 
             <div className="stat-icon">
+
               <Star
                 size={21}
                 fill="currentColor"
               />
+
             </div>
 
             <div>
-              <strong>4.8/5</strong>
+
+              <strong>
+                4.8/5
+              </strong>
 
               <span>
                 Average Rating
               </span>
+
             </div>
 
           </div>
@@ -287,15 +391,21 @@ function Home() {
           <div className="stat-item">
 
             <div className="stat-icon">
+
               <CheckCircle2 size={21} />
+
             </div>
 
             <div>
-              <strong>95%</strong>
+
+              <strong>
+                95%
+              </strong>
 
               <span>
                 Success Rate
               </span>
+
             </div>
 
           </div>
@@ -332,12 +442,15 @@ function Home() {
 
             </div>
 
+
             <Link
               to="/courses"
               className="section-link"
             >
               View all courses
+
               <ArrowRight size={17} />
+
             </Link>
 
           </div>
@@ -346,10 +459,12 @@ function Home() {
           <div className="home-course-grid">
 
             {popularCourses.map((course) => (
+
               <CourseCard
                 key={course.id}
                 course={course}
               />
+
             ))}
 
           </div>
@@ -380,6 +495,7 @@ function Home() {
                 loading="lazy"
               />
 
+
               <div className="why-progress-card">
 
                 <div className="why-progress-top">
@@ -394,6 +510,7 @@ function Home() {
 
                 </div>
 
+
                 <div className="progress-track">
 
                   <div
@@ -404,6 +521,7 @@ function Home() {
                   ></div>
 
                 </div>
+
 
                 <small>
                   Keep going — you're doing great!
@@ -439,7 +557,9 @@ function Home() {
               <div className="benefit-item">
 
                 <div className="benefit-icon">
+
                   <CheckCircle2 size={20} />
+
                 </div>
 
                 <div>
@@ -461,7 +581,9 @@ function Home() {
               <div className="benefit-item">
 
                 <div className="benefit-icon">
+
                   <PlayCircle size={20} />
+
                 </div>
 
                 <div>
@@ -483,7 +605,9 @@ function Home() {
               <div className="benefit-item">
 
                 <div className="benefit-icon">
+
                   <AwardIcon />
+
                 </div>
 
                 <div>
@@ -648,7 +772,9 @@ function Home() {
               >
 
                 <div className="quote-icon">
+
                   <Quote size={20} />
+
                 </div>
 
 
@@ -670,7 +796,9 @@ function Home() {
 
 
                 <p className="testimonial-text">
+
                   "{testimonial.text}"
+
                 </p>
 
 
@@ -681,6 +809,7 @@ function Home() {
                     alt={testimonial.name}
                     loading="lazy"
                   />
+
 
                   <div>
 
@@ -737,6 +866,7 @@ function Home() {
                 they need for their future.
               </p>
 
+
               <div className="cta-actions">
 
                 <Link
@@ -744,8 +874,11 @@ function Home() {
                   className="cta-button"
                 >
                   Start Learning
+
                   <ArrowRight size={18} />
+
                 </Link>
+
 
                 <Link
                   to="/register"
